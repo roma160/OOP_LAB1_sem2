@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="LAB1_semester2.cpp" />
     <ClCompile Include="strings_algorithms.cpp" />
+    <ClCompile Include="suffix_tree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="strings_algorithms.h" />
+    <ClInclude Include="suffix_tree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
