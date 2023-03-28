@@ -18,13 +18,13 @@
     <ClCompile Include="LAB1_semester2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="task2_deps\rmq.cpp">
+    <ClCompile Include="deps\rmq.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="task2_deps\lca.cpp">
+    <ClCompile Include="deps\lca.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="task2_deps\suffixtree.cpp">
+    <ClCompile Include="deps\suffixtree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,13 +32,13 @@
     <ClInclude Include="strings_algorithms.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="task2_deps\rmq.h">
+    <ClInclude Include="deps\rmq.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="task2_deps\lca.h">
+    <ClInclude Include="deps\lca.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="task2_deps\suffixtree.h">
+    <ClInclude Include="deps\suffixtree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="task1\code.h">
@@ -51,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="task4\code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="task5\code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="task6\code.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

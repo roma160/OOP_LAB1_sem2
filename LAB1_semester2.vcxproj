@@ -140,19 +140,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="LAB1_semester2.cpp" />
-    <ClCompile Include="task2_deps\lca.cpp" />
-    <ClCompile Include="task2_deps\rmq.cpp" />
-    <ClCompile Include="task2_deps\suffixtree.cpp" />
+    <ClCompile Include="deps\lca.cpp" />
+    <ClCompile Include="deps\rmq.cpp" />
+    <ClCompile Include="deps\suffixtree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="task1\code.h" />
     <ClInclude Include="task2\code.h" />
-    <ClInclude Include="task2_deps\lca.h" />
-    <ClInclude Include="task2_deps\rmq.h" />
+    <ClInclude Include="deps\lca.h" />
+    <ClInclude Include="deps\rmq.h" />
     <ClInclude Include="strings_algorithms.h" />
-    <ClInclude Include="task2_deps\suffixtree.h" />
+    <ClInclude Include="deps\suffixtree.h" />
     <ClInclude Include="task3\code.h" />
     <ClInclude Include="task4\code.h" />
+    <ClInclude Include="task5\code.h" />
+    <ClInclude Include="task6\code.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

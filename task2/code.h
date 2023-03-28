@@ -3,8 +3,8 @@
 #include <string>
 #include <vector>
 #include <set>
-#include "task2_deps/suffixtree.h"
-#include "task2_deps/lca.h"
+#include "deps/suffixtree.h"
+#include "deps/lca.h"
 
 using namespace std;
 
