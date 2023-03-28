@@ -14,33 +14,40 @@ int main()
     int m = x.size();
     int n = y.size();
     int k = 2;
-    vector<vector<int>> r(m + n + 1, vector<int>(k + 2));
+    vector<vector<int>> r(m + n + 3, vector<int>(k + 2));
+    auto get_r = [&r, m](int p, int q) -> int&
+    {
+        return r[p + m + 1][q + 1];
+    };
+
     vector<int> res;
     for (int p = 0; p <= n; p++)
-        r[p + m][0] = -1;
-    for (int p = -k - 1; p <= -1; p++)
+        get_r(p,-1) = -1;
+
+    for (int p = -k-1; p <= -1; p++)
     {
-        r[p + m][-p] = -p - 1;
-        r[p + m][-p - 1] = -p - 2;
+        get_r(p, -p-1) = -p - 1;
+        get_r(p, -p-2) = -p - 2;
     }
+
     for (int q = -1; q <= k; q++)
-        r[n + m + 1][q + 1] = -1;
+        get_r(n+1, q) = -1;
+
     for (int q = 0; q <= k; q++)
     {
 	    for (int p = -q; p <= n; p++)
 	    {
             int R = max(
-                r[p + m][q] + 1,
+                get_r(p, q-1) + 1,
                 max(
-                r[p - 1 + m][q],
-                r[p + 1 + m][q] + 1
+	                get_r(p-1, q-1),
+	                get_r(p+1, q-1) + 1
                 )
             );
             R = min(R, m);
-            while (R < m && R + p < n && x[R + 1] == y[R + 1 + p]) R++;
-            r[p + m][q + 1] = R;
-            if (r[p + m][q + 1] == m)
-                res.push_back(p + m);
+            while (R < m && R + p < n && x[R] == y[R + p]) R++;
+            get_r(p, q) = R;
+            if (R == m) res.push_back(p + m);
 	    }
     }
 
