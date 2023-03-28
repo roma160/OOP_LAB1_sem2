@@ -17,14 +17,14 @@ rmq::rmq(vector<int> A) :
     A(A), B(K, -1), ST(K, vector<int>(log_n + 1)), type(K, 0),
     block_min(K, vector<vector<int>>(block_size, vector<int>(block_size, -1)))
 {
-    // предподсчитаем позиции минимумов в каждом блоке
+    // РїСЂРµРґРїРѕРґСЃС‡РёС‚Р°РµРј РїРѕР·РёС†РёРё РјРёРЅРёРјСѓРјРѕРІ РІ РєР°Р¶РґРѕРј Р±Р»РѕРєРµ
     for (int i = 0; i < N; i++) {
         int cur_block = i / block_size;
         if (B[cur_block] == -1 || A[B[cur_block]] > A[i])
             B[cur_block] = i;
     }
 
-    // построим Sparse table на массиве B
+    // РїРѕСЃС‚СЂРѕРёРј Sparse table РЅР° РјР°СЃСЃРёРІРµ B
     for (int i = 0; i < K; i++)
         ST[i][0] = B[i];
     for (int j = 1; j <= log_n; j++)
@@ -38,14 +38,14 @@ rmq::rmq(vector<int> A) :
                 ST[i][j] = ST[i][j - 1];
         }
 
-    // Посчитаем тип для каждого блока
+    // РџРѕСЃС‡РёС‚Р°РµРј С‚РёРї РґР»СЏ РєР°Р¶РґРѕРіРѕ Р±Р»РѕРєР°
     for (int i = 0; i < K * block_size; i++) {
         int offset = i % block_size;
         if (offset > 0 && (i >= N || A[i - 1] < A[i]))
             type[i / block_size] += (1 << (offset - 1));
     }
 
-    // Осталось только для каждого блока предподсчитать позиции минимумов на всех подотрезках
+    // РћСЃС‚Р°Р»РѕСЃСЊ С‚РѕР»СЊРєРѕ РґР»СЏ РєР°Р¶РґРѕРіРѕ Р±Р»РѕРєР° РїСЂРµРґРїРѕРґСЃС‡РёС‚Р°С‚СЊ РїРѕР·РёС†РёРё РјРёРЅРёРјСѓРјРѕРІ РЅР° РІСЃРµС… РїРѕРґРѕС‚СЂРµР·РєР°С…
     for (int i = 0; i < K; i++) {
         int t = type[i];
         if (block_min[t][0][0] != -1)
@@ -74,15 +74,15 @@ rmq::minval rmq::minval::min(minval a, minval b) { return a <= b ? a : b; }
 rmq::minval rmq::min(int l, int r) const {
     int bl = l / block_size;
     int br = r / block_size;
-    if (bl == br) // если оба индекса внутри одного блока
+    if (bl == br) // РµСЃР»Рё РѕР±Р° РёРЅРґРµРєСЃР° РІРЅСѓС‚СЂРё РѕРґРЅРѕРіРѕ Р±Р»РѕРєР°
         return minval(block_rmq(bl, l % block_size, r % block_size), this);
 
-    minval left(block_rmq(bl, l % block_size, block_size - 1), this); // найдем минимум на отрезке от l до конца блока, содержащего l
-    minval right(block_rmq(br, 0, r % block_size), this);              // найдем минимум от начала блока, содержащего r, до r
+    minval left(block_rmq(bl, l % block_size, block_size - 1), this); // РЅР°Р№РґРµРј РјРёРЅРёРјСѓРј РЅР° РѕС‚СЂРµР·РєРµ РѕС‚ l РґРѕ РєРѕРЅС†Р° Р±Р»РѕРєР°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ l
+    minval right(block_rmq(br, 0, r % block_size), this);              // РЅР°Р№РґРµРј РјРёРЅРёРјСѓРј РѕС‚ РЅР°С‡Р°Р»Р° Р±Р»РѕРєР°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ r, РґРѕ r
     minval sides = minval::min(left, right);
     if (bl + 1 >= br) return sides;
 
-    // найдем минимум на блоках между крайними
+    // РЅР°Р№РґРµРј РјРёРЅРёРјСѓРј РЅР° Р±Р»РѕРєР°С… РјРµР¶РґСѓ РєСЂР°Р№РЅРёРјРё
     int power = log(br - bl - 1);
     minval insides = minval::min(
         { ST[bl + 1][power], this },
