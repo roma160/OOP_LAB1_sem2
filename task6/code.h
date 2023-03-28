@@ -9,6 +9,7 @@ namespace string_algorithms
 {
 	string task6_optimal(const string& s)
 	{
-		vector<>
+		//vector<>
+		return s;
 	}
 }

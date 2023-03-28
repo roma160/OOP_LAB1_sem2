@@ -18,9 +18,39 @@ namespace string_algorithms
     /// </returns>
     set<int> task2_k_differences(const string& y, const string& x, int k)
     {
-        auto tree = suffixtree::build(y + "#" + x + "$");
-        auto _lca = lca(move(tree.reduced_nodes));
+        // Precomputing stage
+        string to_precompute = y + UNIQUE_CHAR_2 + x + UNIQUE_CHAR_1;
+        suffixtree::tree buff(to_precompute);
+        vector<suffixtree::node>& nodes = buff.nodes;
 
+        vector<int> suffix_to_node(to_precompute.size());
+        vector<int> node_to_length(nodes.size());
+        vector<vector<int>> reduced_nodes(nodes.size());
+
+        for (int i = 0; i < nodes.size(); i++)
+        {
+            // Reduced node
+            for (auto it = nodes[i].children.begin(); it != nodes[i].children.end(); it++)
+                reduced_nodes[i].push_back(it->second);
+
+            // Node to length
+            node_to_length[i] = nodes[i].len();
+        }
+
+        for (int i = 0; i < to_precompute.size(); i++)
+        {
+            int cur_node = 0;
+            int j = i;
+            for (; j < to_precompute.size();)
+            {
+                cur_node = nodes[cur_node].get(to_precompute[j]);
+                j += node_to_length[cur_node];
+            }
+            suffix_to_node[i] = cur_node;
+        }
+        auto _lca = lca(move(reduced_nodes));
+
+        // Algorithm start
         int m = x.size();
         int n = y.size();
 
@@ -54,10 +84,10 @@ namespace string_algorithms
                 );
                 R = min(R, m);
 
-                R += tree.node_to_length[
+                R += node_to_length[
                     _lca.find(
-                        tree.suffix_to_node[y.size() + 1 + R],
-                        tree.suffix_to_node[R + p]
+                        suffix_to_node[y.size() + 1 + R],
+                        suffix_to_node[R + p]
                     )
                 ];
 
