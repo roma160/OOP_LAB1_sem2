@@ -142,10 +142,11 @@
     <ClCompile Include="LAB1_semester2.cpp" />
     <ClCompile Include="task2_deps\lca.cpp" />
     <ClCompile Include="task2_deps\rmq.cpp" />
-    <ClCompile Include="strings_algorithms.cpp" />
     <ClCompile Include="task2_deps\suffixtree.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="task1\code.h" />
+    <ClInclude Include="task2\code.h" />
     <ClInclude Include="task2_deps\lca.h" />
     <ClInclude Include="task2_deps\rmq.h" />
     <ClInclude Include="strings_algorithms.h" />

@@ -18,9 +18,6 @@
     <ClCompile Include="LAB1_semester2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="strings_algorithms.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="task2_deps\rmq.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -42,6 +39,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="task2_deps\suffixtree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="task1\code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="task2\code.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
