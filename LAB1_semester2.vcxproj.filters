@@ -27,6 +27,9 @@
     <ClCompile Include="task2\lca.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="task2\suffixtree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="strings_algorithms.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="task2\lca.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="task2\suffixtree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

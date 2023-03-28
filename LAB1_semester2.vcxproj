@@ -143,11 +143,13 @@
     <ClCompile Include="task2\lca.cpp" />
     <ClCompile Include="task2\rmq.cpp" />
     <ClCompile Include="strings_algorithms.cpp" />
+    <ClCompile Include="task2\suffixtree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="task2\lca.h" />
     <ClInclude Include="task2\rmq.h" />
     <ClInclude Include="strings_algorithms.h" />
+    <ClInclude Include="task2\suffixtree.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

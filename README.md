@@ -27,3 +27,11 @@
 8. [Бінарний пошук](http://algolist.ru/search/bin_search.php)
 9. [Інтерполяційний пошук](http://algolist.ru/search/int_search.php)
 10. [Бінарний пошук з визначенням найближчих вузлів](http://algolist.ru/search/advbin.php)
+
+## The usefull links:
+* Task 2:
+  * https://neerc.ifmo.ru/wiki/index.php?title=%D0%91%D0%BE%D1%80
+  * https://e-maxx.ru/algo/ukkonen
+  * https://stackoverflow.com/questions/9452701/ukkonens-suffix-tree-algorithm-in-plain-english
+  * https://brenden.github.io/ukkonen-animation/
+  * https://dreampuf.github.io/GraphvizOnline/
