@@ -140,10 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="LAB1_semester2.cpp" />
+    <ClCompile Include="task2\lca.cpp" />
     <ClCompile Include="task2\rmq.cpp" />
     <ClCompile Include="strings_algorithms.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="task2\lca.h" />
     <ClInclude Include="task2\rmq.h" />
     <ClInclude Include="strings_algorithms.h" />
   </ItemGroup>

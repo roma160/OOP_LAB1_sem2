@@ -2,30 +2,22 @@
 #include <vector>
 #include <iostream>
 
+#include "task2/lca.h"
 #include "task2/rmq.h"
 
 using namespace std;
 
 int main()
 {
-    vector<int> A{ 1, 2, 1, 0, -1, -2, -1, 0, 1, 2, 3, 4, 5 };
-    rmq q(A);
+    vector<vector<int>> tree = {
+        {1}, {4, 2}, {3}, {}, {5, 6}, {}, {}
+    };
 
-    int padding = 3;
-    for (int i = 0; i < A.size(); i++) {
-        cout << setw(padding) << i;
-    }
-    cout << "\n";
-
-    for (int i = 0; i < A.size(); i++)
-    {
-        cout << setw(padding) << A[i];
-    }
-    cout << "\n";
-
+    lca lca(tree);
     while (true) {
         int l, r;
         cin >> l >> r;
-        cout << l << " " << r << ") " << q.min(l, r) << "\n";
+        int f = lca.find(l - 1, r - 1) + 1;
+        cout << l << " " << r << ") " << f << "\n";
     }
 }
