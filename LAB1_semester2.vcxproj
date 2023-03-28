@@ -140,12 +140,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="LAB1_semester2.cpp" />
+    <ClCompile Include="task2\rmq.cpp" />
     <ClCompile Include="strings_algorithms.cpp" />
-    <ClCompile Include="suffix_tree.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="task2\rmq.h" />
     <ClInclude Include="strings_algorithms.h" />
-    <ClInclude Include="suffix_tree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

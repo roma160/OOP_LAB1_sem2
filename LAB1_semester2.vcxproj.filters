@@ -21,7 +21,7 @@
     <ClCompile Include="strings_algorithms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="suffix_tree.cpp">
+    <ClCompile Include="task2\rmq.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,8 +29,12 @@
     <ClInclude Include="strings_algorithms.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="suffix_tree.h">
+    <ClInclude Include="task2\rmq.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>
