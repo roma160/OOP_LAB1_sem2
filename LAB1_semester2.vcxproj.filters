@@ -21,13 +21,13 @@
     <ClCompile Include="strings_algorithms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="task2\rmq.cpp">
+    <ClCompile Include="task2_deps\rmq.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="task2\lca.cpp">
+    <ClCompile Include="task2_deps\lca.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="task2\suffixtree.cpp">
+    <ClCompile Include="task2_deps\suffixtree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,13 +35,13 @@
     <ClInclude Include="strings_algorithms.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="task2\rmq.h">
+    <ClInclude Include="task2_deps\rmq.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="task2\lca.h">
+    <ClInclude Include="task2_deps\lca.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="task2\suffixtree.h">
+    <ClInclude Include="task2_deps\suffixtree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
