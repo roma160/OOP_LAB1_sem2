@@ -11,16 +11,5 @@ using namespace std;
 
 int main()
 {
-    string x("father");
-    string y(R"(In entirely be to at settling felicity. Fruit two match men you seven share. Needed as or is enough points. Miles at smart ﻿no marry whole linen mr. Income joy nor can wisdom summer. Extremely depending he gentleman improving intention rapturous as.
-
-        Bed sincerity yet therefore forfeited his certainty neglected questions.Pursuit chamber as elderly amongst on.Distant however warrant farther to of.My justice wishing prudent waiting in be.Comparison age not pianoforte increasing delightful now.Insipidity sufficient dispatched any reasonably led ask.Announcing if attachment resolution sentiments admiration me on diminution.)");
-
-    auto res = string_algorithms::task2_k_differences(y, x, 2);
-
-    cout << x << "\n" << y << "\n\n";
-    for(auto index : res)
-    {
-        cout << index << "\n";
-    }
+    cout << string_algorithms::task3("abcddfs", "mafs");
 }

@@ -151,6 +151,7 @@
     <ClInclude Include="task2_deps\rmq.h" />
     <ClInclude Include="strings_algorithms.h" />
     <ClInclude Include="task2_deps\suffixtree.h" />
+    <ClInclude Include="task3\code.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
