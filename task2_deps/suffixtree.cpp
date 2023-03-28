@@ -209,18 +209,30 @@ struct buff_tree
 };
 
 suffixtree::tree::tree(buff_tree* buff):
-	char_nodes(buff->nodes.size()), reduced_nodes(buff->nodes.size())
+	suffix_to_node(buff->str.size()),
+	reduced_nodes(buff->nodes.size()), node_to_length(buff->nodes.size())
 {
     vector<buff_tree::node>& nodes = buff->nodes;
     for(int i = 0; i < buff->nodes.size(); i++)
     {
-	    // Char node
-        char_nodes[i].len = nodes[i].len();
-        char_nodes[i].children = nodes[i].children;
-
         // Reduced node
         for (auto it = nodes[i].children.begin(); it != nodes[i].children.end(); it++)
             reduced_nodes[i].push_back(it->second);
+
+        // Node to length
+        node_to_length[i] = nodes[i].len();
+    }
+
+    for(int i = 0; i < buff->str.size(); i++)
+    {
+        int cur_node = 0;
+        int j = i;
+	    for(; j < buff->str.size();)
+	    {
+            cur_node = nodes[cur_node].get(buff->str[j]);
+            j += node_to_length[cur_node];
+	    }
+        suffix_to_node[i] = cur_node;
     }
 }
 

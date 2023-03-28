@@ -9,13 +9,9 @@ struct buff_tree;
 
 namespace suffixtree
 {
-    struct node {
-        int len;
-        std::map<char, int> children;
-    };
-
     struct tree {
-        std::vector<node> char_nodes;
+        std::vector<int> suffix_to_node;
+        std::vector<int> node_to_length;
         std::vector<std::vector<int>> reduced_nodes;
 
         tree(buff_tree* buff);
