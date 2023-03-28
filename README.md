@@ -19,7 +19,7 @@
 
 1. [~~Пошук точного підрядка в рядку~~](http://algolist.ru/search/esearch/)
 2. [~~Нечіткий пошук (близькі за відстанню, алгоритм Ландау-Вішкіна)~~](http://algolist.ru/search/fsearch/)
-3. [Перевірка на підпослідовність](http://algolist.ru/search/subcheck.php)
+3. [~~Перевірка на підпослідовність~~](http://algolist.ru/search/subcheck.php)
 4. [Загальні підпослідовності. Відстань (алгоритм Вагнера-Фішера)](http://algolist.ru/search/lcs/vagner.php)
 5. [Пошук hcs, lis, his (heavest common sequence - алгоритм Джекобсона-Во, longest incremental sequence - алгоритм Робінсона-Шенстеда, heavest incremental sequence - алгоритм Джекобсона-Во)](http://algolist.ru/search/hcsplus.php)
 6. [Максимальний повторюваний підрядок (наївний алгоритм)](http://algolist.ru/search/lrs/index.php)

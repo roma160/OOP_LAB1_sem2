@@ -50,6 +50,9 @@
     <ClInclude Include="task3\code.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="task4\code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

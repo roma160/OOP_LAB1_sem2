@@ -11,5 +11,5 @@ using namespace std;
 
 int main()
 {
-    cout << string_algorithms::task3("abcddfs", "mafs");
+    cout << string_algorithms::task4("123456", "1236");
 }

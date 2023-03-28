@@ -152,6 +152,7 @@
     <ClInclude Include="strings_algorithms.h" />
     <ClInclude Include="task2_deps\suffixtree.h" />
     <ClInclude Include="task3\code.h" />
+    <ClInclude Include="task4\code.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
