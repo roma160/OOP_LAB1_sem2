@@ -10,16 +10,44 @@ using namespace std;
 
 int main()
 {
-    for (auto el : string_algorithms::task5_lis({ 3, 4, 8, 4, 0, 9, 1, 2, 8, 3, 0, 2, 1, 2, 3, 4 }))
-        cout << el;
-    cout << "\n";
-
-    cout << string_algorithms::task5_lcs(
-        { 3, 4, 8, 4, 0, 9, 1, 2, 8, 3, 0, 2, 1 },
-        { 3, 8, 9, 0, 2, 4, 8, 3, 0, 2, 9, 4, 8 }
-    );
-
-    cout << "\n";
-    for (auto el : string_algorithms::read_sequence("x"))
-        cout << el << " ";
+	while (true)
+	{
+		cout << "Enter task number (1-10): ";
+		int index;
+		cin >> index;
+		switch (index)
+		{
+		case 1:
+			string_algorithms::test_task1();
+			break;
+		case 2:
+			string_algorithms::test_task2();
+			break;
+		case 3:
+			string_algorithms::test_task3();
+			break;
+		case 4:
+			string_algorithms::test_task4();
+			break;
+		case 5:
+			string_algorithms::test_task5();
+			break;
+		case 6:
+			string_algorithms::test_task6();
+			break;
+		case 7:
+			string_algorithms::test_task7();
+			break;
+		case 8:
+			string_algorithms::test_task8();
+			break;
+		case 9:
+			string_algorithms::test_task9();
+			break;
+		case 10:
+			string_algorithms::test_task10();
+			break;
+		}
+		cout << "\n\n";
+	}
 }

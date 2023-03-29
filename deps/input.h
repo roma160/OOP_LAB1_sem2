@@ -13,16 +13,18 @@ namespace string_algorithms
 	string read_string(string name)
 	{
 		cout << "Enter string " << name << " : ";
-		string ret;
-		getline(cin, ret);
+		string ret = "";
+		while(ret.empty())
+			getline(cin, ret);
 		return ret;
 	}
 
 	vector<int> read_sequence(string name)
 	{
 		cout << "Enter sequence " << name << " : ";
-		string inp;
-		getline(cin, inp);
+		string inp = "";
+		while (inp.empty())
+			getline(cin, inp);
 		stringstream ss(inp);
 		vector<int> ret((istream_iterator<int>(ss)), istream_iterator<int>());
 		return ret;

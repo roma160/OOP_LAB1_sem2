@@ -56,9 +56,9 @@ namespace string_algorithms
         int m = x.size();
         int n = y.size();
 
-        vector<vector<int>> r(m + n + 3, vector<int>(k + 2));
-        auto get_r = [&r, m](int p, int q) -> int&
-        { return r[p + m + 1][q + 1]; };
+        vector<vector<int>> r(m + n + 3 + 2*k, vector<int>(k + 2));
+        auto get_r = [&r, m, k](int p, int q) -> int&
+        { return r[p + m + 1 + k][q + 1]; };
 
         set<int> res;
         for (int p = 0; p <= n; p++)
@@ -86,6 +86,7 @@ namespace string_algorithms
                 );
                 R = min(R, m);
 
+                if(R + p < 0) continue;
                 R += node_to_length[
                     _lca.find(
                         suffix_to_node[y.size() + 1 + R],
@@ -95,7 +96,7 @@ namespace string_algorithms
 
                 while (R < m && R + p < n && x[R] == y[R + p]) R++;
                 get_r(p, q) = R;
-                if (R == m) res.insert(p + m);
+                if (R == m) res.insert(p + m - 1);
             }
         }
         return res;
