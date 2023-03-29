@@ -9,12 +9,12 @@ using namespace std;
 
 int main()
 {
-    cout << string_algorithms::task8(
-        { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 8, 8, 9 }, 4)<<"\n";
+    for (auto el : string_algorithms::task5_lis({ 3, 4, 8, 4, 0, 9, 1, 2, 8, 3, 0, 2, 1, 2, 3, 4 }))
+        cout << el;
+    cout << "\n";
 
-    cout << string_algorithms::task9(
-        { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 8, 8, 9 }, 1)<<"\n";
-
-    cout << string_algorithms::task10(
-        { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 8, 8, 9 }, 5, 1);
+    cout << string_algorithms::task5_lcs(
+        { 3, 4, 8, 4, 0, 9, 1, 2, 8, 3, 0, 2, 1 },
+        { 3, 8, 9, 0, 2, 4, 8, 3, 0, 2, 9, 4, 8 }
+    );
 }
