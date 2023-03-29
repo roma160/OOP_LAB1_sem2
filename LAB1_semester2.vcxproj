@@ -145,6 +145,7 @@
     <ClCompile Include="deps\suffixtree.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="deps\input.h" />
     <ClInclude Include="task10\code.h" />
     <ClInclude Include="task1\code.h" />
     <ClInclude Include="task2\code.h" />

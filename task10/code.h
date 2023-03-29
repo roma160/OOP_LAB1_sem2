@@ -37,4 +37,12 @@ namespace string_algorithms
 
 		return task8(list, to_find, l, r);
 	}
+
+	void test_task10()
+	{
+		vector<int> list = read_sequence("list");
+		int to_find = read_int("to_find");
+		int guess_index = read_int("guess_index");
+		cout << "Answer: " << task10(list, to_find, guess_index);
+	}
 }

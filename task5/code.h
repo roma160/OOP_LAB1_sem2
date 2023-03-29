@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 
+#include "deps/input.h"
+
 using namespace std;
 
 namespace string_algorithms
@@ -58,5 +60,25 @@ namespace string_algorithms
                     dp[i][j] = dp[i - 1][j - 1] + 1;
                 else dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
         return dp[n][m];
+	}
+
+    void test_task5()
+	{
+		switch (select_prompt({
+            "lis", "lcs"
+		}))
+		{
+        case 0:
+            cout << "Computing lis\n";
+            vector<int> a = read_sequence("a");
+            cout << "Answer: " << sequence_to_string(task5_lis(a));
+            break;
+        case 1:
+            cout << "Computing lcs\n";
+            vector<int> x = read_sequence("x");
+            vector<int> y = read_sequence("y");
+            cout << "Answer: " << task5_lcs(x, y);
+            break;
+		}
 	}
 }

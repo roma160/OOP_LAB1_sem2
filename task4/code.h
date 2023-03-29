@@ -43,4 +43,12 @@ namespace string_algorithms
 
 		return d[n][m];
 	}
+
+	void test_task4()
+	{
+		string a = read_string("a");
+		string b = read_string("b");
+
+		cout << "Answer: " << task4(a, b);
+	}
 }

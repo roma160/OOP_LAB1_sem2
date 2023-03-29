@@ -3,8 +3,10 @@
 #include <string>
 #include <vector>
 #include <set>
+
 #include "deps/suffixtree.h"
 #include "deps/lca.h"
+#include "deps/input.h"
 
 using namespace std;
 
@@ -97,5 +99,15 @@ namespace string_algorithms
             }
         }
         return res;
+    }
+
+    void test_task2()
+    {
+        string y = read_string("y");
+        string x = read_string("x");
+        int k = read_int("k");
+
+        auto res = task2_k_differences(y, x, k);
+        cout << "Answer: " << sequence_to_string(vector<int>(res.begin(), res.end()));
     }
 }

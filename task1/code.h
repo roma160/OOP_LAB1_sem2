@@ -1,6 +1,9 @@
 #pragma once
+
 #include <string>
 #include <vector>
+
+#include "deps/input.h"
 
 using namespace std;
 
@@ -36,5 +39,12 @@ namespace string_algorithms
                 return i - j;
         }
         return -1;
+    }
+
+    void test_task1()
+    {
+        string s = read_string("s");
+        string x = read_string("x");
+        cout << "Answer: " << task1(s, x);
     }
 }

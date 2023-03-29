@@ -28,4 +28,11 @@ namespace string_algorithms
 
 		return ret;
 	}
+
+	void test_task7()
+	{
+		vector<int> a = read_sequence("a");
+		vector<int> b = read_sequence("b");
+		cout << "Answer: " << sequence_to_string(task7(a, b));
+	}
 }

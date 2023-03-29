@@ -20,4 +20,14 @@ namespace string_algorithms
 				return -1;
 		}
 	}
+
+	void test_task9()
+	{
+		vector<int> list = read_sequence("list");
+		int to_find = read_int("to_find");
+		int l = read_int("left (enter -1 for default val)");
+		if (l == -1) l = 0;
+		int r = read_int("left (enter -1 for default val)");
+		cout << "Answer: " << task9(list, to_find, l, r);
+	}
 }

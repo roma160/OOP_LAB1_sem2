@@ -4,6 +4,8 @@
 #include <vector>
 #include <set>
 
+#include "deps/input.h"
+
 using namespace std;
 
 namespace string_algorithms
@@ -26,5 +28,13 @@ namespace string_algorithms
 			n--;
 		}
 		return m == -1;
+	}
+
+	void test_task3()
+	{
+		string y = read_string("y");
+		string x = read_string("x");
+
+		cout << "Answer: " << task3(y, x);
 	}
 }

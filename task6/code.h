@@ -39,4 +39,10 @@ namespace string_algorithms
 
 		return max_s;
 	}
+
+    void test_task6()
+	{
+        string s = read_string("s");
+        cout << "Answer: " << task6_optimal(s);
+	}
 }
