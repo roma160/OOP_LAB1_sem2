@@ -59,6 +59,18 @@
     <ClInclude Include="task6\code.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="task7\code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="task8\code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="task9\code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="task10\code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

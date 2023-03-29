@@ -5,3 +5,7 @@
 #include "task4/code.h"
 #include "task5/code.h"
 #include "task6/code.h"
+#include "task7/code.h"
+#include "task8/code.h"
+#include "task9/code.h"
+#include "task10/code.h"

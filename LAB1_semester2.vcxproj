@@ -145,6 +145,7 @@
     <ClCompile Include="deps\suffixtree.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="task10\code.h" />
     <ClInclude Include="task1\code.h" />
     <ClInclude Include="task2\code.h" />
     <ClInclude Include="deps\lca.h" />
@@ -155,6 +156,9 @@
     <ClInclude Include="task4\code.h" />
     <ClInclude Include="task5\code.h" />
     <ClInclude Include="task6\code.h" />
+    <ClInclude Include="task7\code.h" />
+    <ClInclude Include="task8\code.h" />
+    <ClInclude Include="task9\code.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
