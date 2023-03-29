@@ -1,21 +1,17 @@
 #pragma once
-#include <string>
+
 #include <vector>
 #include <queue>
+
+#include "deps/list_sort.h"
 
 using namespace std;
 
 namespace string_algorithms
 {
-	int task8(const vector<int>& list, int to_find, int l = 0, int r = -1)
+	int _raw_task8(const vector<pair<int, int>>& indexed_list, int to_find, int l = 0, int r = -1)
 	{
-		if (r == -1) r = list.size() - 1;
-		vector<pair<int, int>> indexed_list(r + 1);
-		for (int i = 0; i <= r; i++)
-			indexed_list[i] = move(pair<int, int>{ list[i], i });
-		sort(indexed_list.begin(), indexed_list.end(), 
-			[](auto a, auto b) { return a.first < b.first; });
-
+		if (r == -1) r = indexed_list.size() - 1;
 		while (true)
 		{
 			int middle = (l + r) / 2;
@@ -25,5 +21,11 @@ namespace string_algorithms
 
 			if (l > r) return -1;
 		}
+	}
+
+	int task8(const vector<int>& list, int to_find, int l = 0, int r = -1)
+	{
+		vector<pair<int, int>> indexed_list = sort_list(list);
+		return _raw_task8(indexed_list, to_find, l, r);
 	}
 }
