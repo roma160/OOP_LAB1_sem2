@@ -1,33 +1,23 @@
 #pragma once
 
 #include <vector>
-#include <queue>
-
-#include "deps/list_sort.h"
 
 using namespace std;
 
 namespace string_algorithms
 {
-	int _raw_task9(const vector<pair<int, int>>& indexed_list, int to_find)
+	int task9(const vector<int>& list, int to_find, int l = 0, int r = -1)
 	{
-		int l = 0, r = indexed_list.size() - 1;
+		if (r == -1) r = list.size() - 1;
 		while (true)
 		{
-			int middle = l + (r - l) * (to_find - indexed_list[l].first) /
-				(indexed_list[r].first - indexed_list[l].first);
-			if (to_find < indexed_list[middle].first) r = middle - 1;
-			else if (to_find > indexed_list[middle].first) l = middle + 1;
-			else return indexed_list[middle].second;
+			int middle = l + (r - l) * (to_find - list[l]) / (list[r] - list[l]);
+			if (to_find < list[middle]) r = middle - 1;
+			else if (to_find > list[middle]) l = middle + 1;
+			else return middle;
 
-			if (indexed_list[l].first > to_find || indexed_list[r].first < to_find || l > r)
+			if (list[l] > to_find || list[r] < to_find || l > r)
 				return -1;
 		}
-	}
-
-	int task9(const vector<int>& list, int to_find)
-	{
-		vector<pair<int, int>> indexed_list = sort_list(list);
-		return _raw_task9(indexed_list, to_find);
 	}
 }

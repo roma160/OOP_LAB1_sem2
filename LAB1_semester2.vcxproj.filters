@@ -71,9 +71,6 @@
     <ClInclude Include="task10\code.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="deps\list_sort.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
