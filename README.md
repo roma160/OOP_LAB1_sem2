@@ -26,7 +26,7 @@
 7. [~~Загальні елементи двох масивів ()~~](http://algolist.ru/search/lce.php)
 8. [~~Бінарний пошук~~](http://algolist.ru/search/bin_search.php)
 9. [~~Інтерполяційний пошук~~](http://algolist.ru/search/int_search.php)
-10. [Бінарний пошук з визначенням найближчих вузлів](http://algolist.ru/search/advbin.php)
+10. [~~Бінарний пошук з визначенням найближчих вузлів~~](http://algolist.ru/search/advbin.php)
 
 ## The usefull links:
 * Task 2:
