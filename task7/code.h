@@ -1,5 +1,5 @@
 #pragma once
-#include <string>
+
 #include <vector>
 #include <queue>
 
@@ -7,8 +7,25 @@ using namespace std;
 
 namespace string_algorithms
 {
-	void task7(const string& s)
+	vector<int> task7(vector<int> a, vector<int> b)
 	{
-		
+		sort(a.begin(), a.end());
+		sort(b.begin(), b.end());
+		int n = a.size(), m = b.size();
+		int i = 0, j = 0;
+
+		vector<int> ret;
+		while(i < n && j < m)
+		{
+			if (a[i] < b[j]) i++;
+			else if (a[i] > b[j]) j++;
+			else
+			{
+				ret.push_back(a[i]);
+				i++; j++;
+			}
+		}
+
+		return ret;
 	}
 }

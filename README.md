@@ -23,7 +23,7 @@
 4. [~~Загальні підпослідовності. Відстань (алгоритм Вагнера-Фішера)~~](http://algolist.ru/search/lcs/vagner.php)
 5. [Пошук hcs, lis, his (heavest common sequence - алгоритм Джекобсона-Во, longest incremental sequence - алгоритм Робінсона-Шенстеда, heavest incremental sequence - алгоритм Джекобсона-Во)](http://algolist.ru/search/hcsplus.php)
 6. [~~Максимальний повторюваний підрядок (наївний алгоритм)~~](http://algolist.ru/search/lrs/index.php)
-7. [Загальні елементи двох масивів ()](http://algolist.ru/search/lce.php)
+7. [~~Загальні елементи двох масивів ()~~](http://algolist.ru/search/lce.php)
 8. [Бінарний пошук](http://algolist.ru/search/bin_search.php)
 9. [Інтерполяційний пошук](http://algolist.ru/search/int_search.php)
 10. [Бінарний пошук з визначенням найближчих вузлів](http://algolist.ru/search/advbin.php)
