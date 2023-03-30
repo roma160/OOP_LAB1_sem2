@@ -35,6 +35,6 @@ namespace string_algorithms
 		string y = read_string("y");
 		string x = read_string("x");
 
-		cout << "Answer: " << task3(y, x);
+		cout << (task3(y, x) ? "x IS in y" : "x is NOT in y");
 	}
 }

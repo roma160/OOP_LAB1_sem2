@@ -33,6 +33,6 @@ namespace string_algorithms
 	{
 		vector<int> a = read_sequence("a");
 		vector<int> b = read_sequence("b");
-		cout << "Answer: " << sequence_to_string(task7(a, b));
+		cout << "Common elements of a and b : " << sequence_to_string(task7(a, b));
 	}
 }

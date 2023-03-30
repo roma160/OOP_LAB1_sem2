@@ -56,9 +56,9 @@ namespace string_algorithms
         int m = x.size();
         int n = y.size();
 
-        vector<vector<int>> r(m + n + 3 + 2*k, vector<int>(k + 2));
+        vector<vector<int>> r(m + n + 3, vector<int>(k + 2));
         auto get_r = [&r, m, k](int p, int q) -> int&
-        { return r[p + m + 1 + k][q + 1]; };
+        { return r[p + m + 1][q + 1]; };
 
         set<int> res;
         for (int p = 0; p <= n; p++)
@@ -86,7 +86,7 @@ namespace string_algorithms
                 );
                 R = min(R, m);
 
-                if(R + p < 0) continue;
+                //if(R + p < 0) continue;
                 R += node_to_length[
                     _lca.find(
                         suffix_to_node[y.size() + 1 + R],
@@ -109,6 +109,7 @@ namespace string_algorithms
         int k = read_int("k");
 
         auto res = task2_k_differences(y, x, k);
-        cout << "Answer: " << sequence_to_string(vector<int>(res.begin(), res.end()));
+        cout << "Indexes of occurrences ends (0-indexed) :\n" <<
+            sequence_to_string(vector<int>(res.begin(), res.end()));
     }
 }

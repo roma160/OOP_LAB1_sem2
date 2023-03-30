@@ -43,6 +43,6 @@ namespace string_algorithms
     void test_task6()
 	{
         string s = read_string("s");
-        cout << "Answer: " << task6_optimal(s);
+        cout << "Longest repeated subsequence : " << task6_optimal(s);
 	}
 }

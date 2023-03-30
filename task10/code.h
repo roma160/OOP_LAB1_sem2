@@ -43,6 +43,6 @@ namespace string_algorithms
 		vector<int> list = read_sequence("list");
 		int to_find = read_int("to_find");
 		int guess_index = read_int("guess_index");
-		cout << "Answer: " << task10(list, to_find, guess_index);
+		cout << "Index of to_find (zero indexed) : " << task10(list, to_find, guess_index);
 	}
 }

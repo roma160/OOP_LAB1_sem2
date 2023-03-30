@@ -45,6 +45,6 @@ namespace string_algorithms
     {
         string s = read_string("s");
         string x = read_string("x");
-        cout << "Answer: " << task1(s, x);
+        cout << "Index of occurrence (0-indexed) : " << task1(s, x);
     }
 }

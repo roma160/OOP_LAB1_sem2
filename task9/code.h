@@ -28,6 +28,6 @@ namespace string_algorithms
 		int l = read_int("left (enter -1 for default val)");
 		if (l == -1) l = 0;
 		int r = read_int("left (enter -1 for default val)");
-		cout << "Answer: " << task9(list, to_find, l, r);
+		cout << "Index of to_find (zero indexed) : " << task9(list, to_find, l, r);
 	}
 }

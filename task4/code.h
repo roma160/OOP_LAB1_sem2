@@ -49,6 +49,6 @@ namespace string_algorithms
 		string a = read_string("a");
 		string b = read_string("b");
 
-		cout << "Answer: " << task4(a, b);
+		cout << "Distance between a and b: " << task4(a, b);
 	}
 }

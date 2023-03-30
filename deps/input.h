@@ -10,31 +10,34 @@ using namespace std;
 
 namespace string_algorithms
 {
+	// https://stackoverflow.com/questions/35974402/reading-getline-from-cin-into-a-stringstream-c
 	string read_string(string name)
 	{
 		cout << "Enter string " << name << " : ";
-		string ret = "";
-		while(ret.empty())
-			getline(cin, ret);
+		string ret;
+		getline(cin, ret);
 		return ret;
 	}
 
 	vector<int> read_sequence(string name)
 	{
-		cout << "Enter sequence " << name << " : ";
-		string inp = "";
-		while (inp.empty())
-			getline(cin, inp);
+		cout << "Enter numerical sequence " << name << "\n(space is delimiter) : ";
+		string inp;
+		getline(cin, inp);
 		stringstream ss(inp);
 		vector<int> ret((istream_iterator<int>(ss)), istream_iterator<int>());
 		return ret;
 	}
 
-	int read_int(string name)
+	int read_int(string name, bool use_prompt = true)
 	{
-		cout << "Enter int " << name << " : ";
+		if (use_prompt) cout << "Enter int " << name << " ";
+		cout << ": ";
+		string inp;
+		getline(cin, inp);
+		stringstream ss(inp);
 		int ret;
-		cin >> ret;
+		ss >> ret;
 		return ret;
 	}
 
@@ -50,9 +53,6 @@ namespace string_algorithms
 		cout << "Select one of the options:\n";
 		for (int i = 0; i < options.size(); i++)
 			cout << "   " << i + 1 << ". " << options[i]<<"\n";
-		cout << ": ";
-		int ret;
-		cin >> ret;
-		return ret - 1;
+		return read_int("", false) - 1;
 	}
 }

@@ -18,15 +18,25 @@
 ## Algorithms links:
 
 1. [~~Пошук точного підрядка в рядку~~](http://algolist.ru/search/esearch/)
+    * [code](./task1/code.h)
 2. [~~Нечіткий пошук (близькі за відстанню, алгоритм Ландау-Вішкіна)~~](http://algolist.ru/search/fsearch/)
+    * [code](./task2/code.h)
 3. [~~Перевірка на підпослідовність~~](http://algolist.ru/search/subcheck.php)
+    * [code](./task3/code.h)
 4. [~~Загальні підпослідовності. Відстань (алгоритм Вагнера-Фішера)~~](http://algolist.ru/search/lcs/vagner.php)
-5. [Пошук hcs, lis, his (heavest common sequence - алгоритм Джекобсона-Во, longest incremental sequence - алгоритм Робінсона-Шенстеда, heavest incremental sequence - алгоритм Джекобсона-Во)](http://algolist.ru/search/hcsplus.php)
+    * [code](./task4/code.h)
+5. [~~Пошук hcs, lis, his (heavest common sequence - алгоритм Джекобсона-Во, longest incremental sequence - алгоритм Робінсона-Шенстеда, heavest incremental sequence - алгоритм Джекобсона-Во)~~](http://algolist.ru/search/hcsplus.php)
+    * [code](./task5/code.h)
 6. [~~Максимальний повторюваний підрядок (наївний алгоритм)~~](http://algolist.ru/search/lrs/index.php)
+    * [code](./task6/code.h)
 7. [~~Загальні елементи двох масивів ()~~](http://algolist.ru/search/lce.php)
+    * [code](./task7/code.h)
 8. [~~Бінарний пошук~~](http://algolist.ru/search/bin_search.php)
+    * [code](./task8/code.h)
 9. [~~Інтерполяційний пошук~~](http://algolist.ru/search/int_search.php)
+    * [code](./task9/code.h)
 10. [~~Бінарний пошук з визначенням найближчих вузлів~~](http://algolist.ru/search/advbin.php)
+    * [code](./task10/code.h)
 
 ## The usefull links:
 * Task 2:
