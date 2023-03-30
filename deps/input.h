@@ -32,6 +32,7 @@ namespace string_algorithms
 	int read_int(string name, bool use_prompt = true)
 	{
 		if (use_prompt) cout << "Enter int " << name << " ";
+		else cout << name;
 		cout << ": ";
 		string inp;
 		getline(cin, inp);

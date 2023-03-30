@@ -12,10 +12,7 @@ int main()
 {
 	while (true)
 	{
-		cout << "Enter task number (1-10): ";
-		int index;
-		cin >> index;
-		switch (index)
+		switch (string_algorithms::read_int("Enter task number (1-10)", false))
 		{
 		case 1:
 			string_algorithms::test_task1();
@@ -46,6 +43,9 @@ int main()
 			break;
 		case 10:
 			string_algorithms::test_task10();
+			break;
+		default:
+			cout << "Invalid task number, try again.";
 			break;
 		}
 		cout << "\n\n";

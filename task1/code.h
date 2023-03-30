@@ -9,6 +9,7 @@ using namespace std;
 
 namespace string_algorithms
 {
+    // Morris–Pratt algorithm
     int task1(const string& s, const string& x)
     {
         int x_size = x.size();
